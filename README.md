@@ -29,7 +29,7 @@ Detailed architecture decisions, design trade-offs, security considerations, and
 
 Before running the project, make sure you have:
 
-* Node.js (v23 or later recommended)
+* Node.js (v20 or later recommended)
 * npm (v10 or later)
 * MongoDB (Local or MongoDB Atlas)
 
