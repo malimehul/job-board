@@ -1,7 +1,7 @@
-import RecruiterRepository from '../repositories/recruiter.repository.js';
-import { IUserDocument } from '../../auth/models/user.model.js';
-import { UpdateRecruiterProfileDTO } from '../dtos/recruiter.dto.js';
-import { NotFoundError } from '../../../core/errors/AppError.js';
+import RecruiterRepository from '../repositories/recruiter.repository';
+import { IUserDocument } from '../../auth/models/user.model';
+import { UpdateRecruiterProfileDTO } from '../dtos/recruiter.dto';
+import { NotFoundError } from '../../../core/errors/AppError';
 
 export class RecruiterService {
   private recruiterRepository: RecruiterRepository;

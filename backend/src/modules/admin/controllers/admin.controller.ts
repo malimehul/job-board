@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import AdminService from '../services/admin.service.js';
+import AdminService from '../services/admin.service';
 
 export class AdminController {
   private adminService: AdminService;

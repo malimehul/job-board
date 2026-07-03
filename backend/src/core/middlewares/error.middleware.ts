@@ -1,8 +1,8 @@
 import { Request, Response, NextFunction, ErrorRequestHandler } from 'express';
 import { ZodError } from 'zod';
-import { AppError } from '../errors/AppError.js';
-import logger from '../utils/logger.js';
-import env from '../config/environment.js';
+import { AppError } from '../errors/AppError';
+import logger from '../utils/logger';
+import env from '../config/environment';
 
 export const errorHandler: ErrorRequestHandler = (
   err: Error,

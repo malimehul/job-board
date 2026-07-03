@@ -1,5 +1,5 @@
-import { User, IUserDocument } from '../models/user.model.js';
-import { CreateUserRepoDTO, UpdateProfileDTO } from '../dtos/auth.dto.js';
+import { User, IUserDocument } from '../models/user.model';
+import { CreateUserRepoDTO, UpdateProfileDTO } from '../dtos/auth.dto';
 
 export class UserRepository {
   async findByEmail(email: string): Promise<IUserDocument | null> {

@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import ApplicationController from '../controllers/application.controller.js';
-import { authenticate, authorizeRoles } from '../../../core/middlewares/auth.middleware.js';
+import ApplicationController from '../controllers/application.controller';
+import { authenticate, authorizeRoles } from '../../../core/middlewares/auth.middleware';
 
 const router = Router();
 const controller = new ApplicationController();

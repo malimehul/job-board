@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import ApplicationService from '../services/application.service.js';
+import ApplicationService from '../services/application.service';
 
 export class ApplicationController {
   private applicationService: ApplicationService;

@@ -1,5 +1,5 @@
 import multer from 'multer';
-import { BadRequestError } from '../errors/AppError.js';
+import { BadRequestError } from '../errors/AppError';
 
 // Setup memory storage to hold files in buffer directly (avoid local server writes)
 const storage = multer.memoryStorage();

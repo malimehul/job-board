@@ -1,5 +1,5 @@
-import Application, { IApplicationDocument } from '../models/application.model.js';
-import { CreateApplicationDTO } from '../dtos/application.dto.js';
+import Application, { IApplicationDocument } from '../models/application.model';
+import { CreateApplicationDTO } from '../dtos/application.dto';
 
 export class ApplicationRepository {
   async create(candidateId: string, data: CreateApplicationDTO): Promise<IApplicationDocument> {

@@ -1,7 +1,7 @@
-import Job from '../../jobs/models/job.model.js';
-import Application from '../../applications/models/application.model.js';
-import User, { IUserDocument } from '../../auth/models/user.model.js';
-import { UpdateRecruiterProfileDTO } from '../dtos/recruiter.dto.js';
+import Job from '../../jobs/models/job.model';
+import Application from '../../applications/models/application.model';
+import User, { IUserDocument } from '../../auth/models/user.model';
+import { UpdateRecruiterProfileDTO } from '../dtos/recruiter.dto';
 
 export class RecruiterRepository {
   async findById(id: string): Promise<IUserDocument | null> {

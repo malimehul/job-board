@@ -1,10 +1,10 @@
-import ApplicationRepository from '../repositories/application.repository.js';
-import JobRepository from '../../jobs/repositories/job.repository.js';
-import { IApplicationDocument } from '../models/application.model.js';
-import { CreateApplicationDTO } from '../dtos/application.dto.js';
-import { NotFoundError, ForbiddenError, BadRequestError, ConflictError } from '../../../core/errors/AppError.js';
-import { sendApplicationStatusEmail } from '../../../core/utils/email.js';
-import CandidateRepository from '../../candidate/repositories/candidate.repository.js';
+import ApplicationRepository from '../repositories/application.repository';
+import JobRepository from '../../jobs/repositories/job.repository';
+import { IApplicationDocument } from '../models/application.model';
+import { CreateApplicationDTO } from '../dtos/application.dto';
+import { NotFoundError, ForbiddenError, BadRequestError, ConflictError } from '../../../core/errors/AppError';
+import { sendApplicationStatusEmail } from '../../../core/utils/email';
+import CandidateRepository from '../../candidate/repositories/candidate.repository';
 
 export class ApplicationService {
   private candidateRepository: CandidateRepository;

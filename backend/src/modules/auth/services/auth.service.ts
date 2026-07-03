@@ -1,11 +1,11 @@
 import bcrypt from 'bcrypt';
 import crypto from 'crypto';
-import UserRepository from '../repositories/user.repository.js';
-import { IUserDocument } from '../models/user.model.js';
-import { ConflictError, UnauthorizedError, NotFoundError, BadRequestError } from '../../../core/errors/AppError.js';
-import { signAccessToken, signRefreshToken, verifyRefreshToken } from '../../../core/utils/jwt.js';
-import { RegisterDTO, LoginDTO, UpdateProfileDTO, ForgotPasswordDTO, ResetPasswordDTO } from '../dtos/auth.dto.js';
-import { sendPasswordResetEmail } from '../../../core/utils/email.js';
+import UserRepository from '../repositories/user.repository';
+import { IUserDocument } from '../models/user.model';
+import { ConflictError, UnauthorizedError, NotFoundError, BadRequestError } from '../../../core/errors/AppError';
+import { signAccessToken, signRefreshToken, verifyRefreshToken } from '../../../core/utils/jwt';
+import { RegisterDTO, LoginDTO, UpdateProfileDTO, ForgotPasswordDTO, ResetPasswordDTO } from '../dtos/auth.dto';
+import { sendPasswordResetEmail } from '../../../core/utils/email';
 
 export class AuthService {
   private userRepository: UserRepository;
@@ -83,7 +83,7 @@ export class AuthService {
     try {
       const payload = verifyRefreshToken(token);
       const user = await this.userRepository.findById(payload.sub);
-      
+
       if (!user || user.refreshToken !== token) {
         throw new UnauthorizedError('Invalid or expired refresh token');
       }

@@ -1,13 +1,13 @@
 import { Router } from 'express';
-import AdminController from '../controllers/admin.controller.js';
-import validate from '../../../core/middlewares/validation.middleware.js';
-import { authenticate, authorizeRoles } from '../../../core/middlewares/auth.middleware.js';
+import AdminController from '../controllers/admin.controller';
+import validate from '../../../core/middlewares/validation.middleware';
+import { authenticate, authorizeRoles } from '../../../core/middlewares/auth.middleware';
 import {
   userQuerySchema,
   jobQuerySchema,
   applicationQuerySchema,
   analyticsQuerySchema,
-} from '../validators/admin.validator.js';
+} from '../validators/admin.validator';
 
 const router = Router();
 const controller = new AdminController();

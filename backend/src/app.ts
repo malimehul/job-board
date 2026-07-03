@@ -3,16 +3,16 @@ import cors from 'cors';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 import morgan from 'morgan';
-import env from './core/config/environment.js';
-import logger from './core/utils/logger.js';
-import errorHandler from './core/middlewares/error.middleware.js';
-import authRoutes from './modules/auth/routes/auth.routes.js';
-import jobRoutes from './modules/jobs/routes/job.routes.js';
-import applicationRoutes from './modules/applications/routes/application.routes.js';
-import candidateRoutes from './modules/candidate/routes/candidate.routes.js';
-import adminRoutes from './modules/admin/routes/admin.routes.js';
-import recruiterRoutes from './modules/recruiter/routes/recruiter.routes.js';
-import { NotFoundError } from './core/errors/AppError.js';
+import env from './core/config/environment';
+import logger from './core/utils/logger';
+import errorHandler from './core/middlewares/error.middleware';
+import authRoutes from './modules/auth/routes/auth.routes';
+import jobRoutes from './modules/jobs/routes/job.routes';
+import applicationRoutes from './modules/applications/routes/application.routes';
+import candidateRoutes from './modules/candidate/routes/candidate.routes';
+import adminRoutes from './modules/admin/routes/admin.routes';
+import recruiterRoutes from './modules/recruiter/routes/recruiter.routes';
+import { NotFoundError } from './core/errors/AppError';
 
 const app = express();
 

@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
-import { verifyToken } from '../utils/jwt.js';
-import { UnauthorizedError, ForbiddenError } from '../errors/AppError.js';
-import User from '../../modules/auth/models/user.model.js';
+import { verifyToken } from '../utils/jwt';
+import { UnauthorizedError, ForbiddenError } from '../errors/AppError';
+import User from '../../modules/auth/models/user.model';
 
 export const authenticate = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
   const authHeader = req.headers.authorization;
@@ -15,7 +15,7 @@ export const authenticate = async (req: Request, res: Response, next: NextFuncti
 
   try {
     const decoded = verifyToken(token);
-    
+
     // Check if the user exists and still has an active session (refreshToken is present)
     const user = await User.findById(decoded.sub);
     if (!user || !user.refreshToken) {

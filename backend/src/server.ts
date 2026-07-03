@@ -1,7 +1,7 @@
-import app from './app.js';
-import env from './core/config/environment.js';
-import connectDB from './core/config/db.js';
-import logger from './core/utils/logger.js';
+import app from './app';
+import env from './core/config/environment';
+import connectDB from './core/config/db';
+import logger from './core/utils/logger';
 
 const startServer = async () => {
   // Connect Database

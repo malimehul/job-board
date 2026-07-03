@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
-import env from '../config/environment.js';
-import logger from './logger.js';
+import env from '../config/environment';
+import logger from './logger';
 
 export type ApplicationStatus =
   | 'Applied'

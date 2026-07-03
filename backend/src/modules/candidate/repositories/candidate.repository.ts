@@ -1,6 +1,6 @@
-import User, { IUserDocument } from '../../auth/models/user.model.js';
-import Application, { IApplicationDocument } from '../../applications/models/application.model.js';
-import Job, { IJobDocument } from '../../jobs/models/job.model.js';
+import User, { IUserDocument } from '../../auth/models/user.model';
+import Application, { IApplicationDocument } from '../../applications/models/application.model';
+import Job, { IJobDocument } from '../../jobs/models/job.model';
 
 export class CandidateRepository {
   async getCandidateById(

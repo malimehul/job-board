@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import RecruiterController from '../controllers/recruiter.controller.js';
-import validate from '../../../core/middlewares/validation.middleware.js';
-import { authenticate, authorizeRoles } from '../../../core/middlewares/auth.middleware.js';
-import { updateRecruiterProfileSchema } from '../validators/recruiter.validator.js';
+import RecruiterController from '../controllers/recruiter.controller';
+import validate from '../../../core/middlewares/validation.middleware';
+import { authenticate, authorizeRoles } from '../../../core/middlewares/auth.middleware';
+import { updateRecruiterProfileSchema } from '../validators/recruiter.validator';
 
 const router = Router();
 const controller = new RecruiterController();

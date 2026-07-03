@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import AuthController from '../controllers/auth.controller.js';
-import validate from '../../../core/middlewares/validation.middleware.js';
-import { authenticate, authorizeRoles } from '../../../core/middlewares/auth.middleware.js';
-import { upload } from '../../../core/middlewares/upload.middleware.js';
+import AuthController from '../controllers/auth.controller';
+import validate from '../../../core/middlewares/validation.middleware';
+import { authenticate, authorizeRoles } from '../../../core/middlewares/auth.middleware';
+import { upload } from '../../../core/middlewares/upload.middleware';
 import {
   registerSchema,
   loginSchema,
@@ -10,7 +10,7 @@ import {
   refreshTokenSchema,
   forgotPasswordSchema,
   resetPasswordSchema,
-} from '../validators/auth.validator.js';
+} from '../validators/auth.validator';
 
 const router = Router();
 const controller = new AuthController();

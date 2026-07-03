@@ -1,8 +1,8 @@
 import { Request, Response, NextFunction } from 'express';
-import AuthService from '../services/auth.service.js';
-import CandidateService from '../../candidate/services/candidate.service.js';
-import RecruiterService from '../../recruiter/services/recruiter.service.js';
-import { BadRequestError } from '../../../core/errors/AppError.js';
+import AuthService from '../services/auth.service';
+import CandidateService from '../../candidate/services/candidate.service';
+import RecruiterService from '../../recruiter/services/recruiter.service';
+import { BadRequestError } from '../../../core/errors/AppError';
 
 export class AuthController {
   private authService: AuthService;

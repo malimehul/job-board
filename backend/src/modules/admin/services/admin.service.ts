@@ -1,12 +1,12 @@
-import AdminRepository from '../repositories/admin.repository.js';
-import UserRepository from '../../auth/repositories/user.repository.js';
-import JobRepository from '../../jobs/repositories/job.repository.js';
-import ApplicationRepository from '../../applications/repositories/application.repository.js';
-import { IUserDocument } from '../../auth/models/user.model.js';
-import { IJobDocument } from '../../jobs/models/job.model.js';
-import { IApplicationDocument } from '../../applications/models/application.model.js';
-import { UserQueryDTO, JobQueryDTO, ApplicationQueryDTO, AnalyticsQueryDTO } from '../dtos/admin.dto.js';
-import { NotFoundError, BadRequestError } from '../../../core/errors/AppError.js';
+import AdminRepository from '../repositories/admin.repository';
+import UserRepository from '../../auth/repositories/user.repository';
+import JobRepository from '../../jobs/repositories/job.repository';
+import ApplicationRepository from '../../applications/repositories/application.repository';
+import { IUserDocument } from '../../auth/models/user.model';
+import { IJobDocument } from '../../jobs/models/job.model';
+import { IApplicationDocument } from '../../applications/models/application.model';
+import { UserQueryDTO, JobQueryDTO, ApplicationQueryDTO, AnalyticsQueryDTO } from '../dtos/admin.dto';
+import { NotFoundError, BadRequestError } from '../../../core/errors/AppError';
 
 export class AdminService {
   private adminRepository: AdminRepository;

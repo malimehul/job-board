@@ -1,6 +1,6 @@
-import User from '../../auth/models/user.model.js';
-import Job from '../../jobs/models/job.model.js';
-import Application from '../../applications/models/application.model.js';
+import User from '../../auth/models/user.model';
+import Job from '../../jobs/models/job.model';
+import Application from '../../applications/models/application.model';
 
 export class AdminRepository {
   async getDashboardStats(matchQuery: any, startOfToday: Date): Promise<{

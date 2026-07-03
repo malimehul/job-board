@@ -1,10 +1,10 @@
 import { Router } from 'express';
-import JobController from '../controllers/job.controller.js';
-import ApplicationController from '../../applications/controllers/application.controller.js';
-import validate from '../../../core/middlewares/validation.middleware.js';
-import { authenticate, authorizeRoles } from '../../../core/middlewares/auth.middleware.js';
-import { createJobSchema, updateJobSchema } from '../validators/job.validator.js';
-import { jobSearchQuerySchema } from '../validators/job.query.validator.js';
+import JobController from '../controllers/job.controller';
+import ApplicationController from '../../applications/controllers/application.controller';
+import validate from '../../../core/middlewares/validation.middleware';
+import { authenticate, authorizeRoles } from '../../../core/middlewares/auth.middleware';
+import { createJobSchema, updateJobSchema } from '../validators/job.validator';
+import { jobSearchQuerySchema } from '../validators/job.query.validator';
 
 const router = Router();
 const controller = new JobController();

@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import RecruiterService from '../services/recruiter.service.js';
+import RecruiterService from '../services/recruiter.service';
 
 export class RecruiterController {
   private recruiterService: RecruiterService;

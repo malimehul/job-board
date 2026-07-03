@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import ApplicationController from '../controllers/application.controller.js';
-import validate from '../../../core/middlewares/validation.middleware.js';
-import { authenticate, authorizeRoles } from '../../../core/middlewares/auth.middleware.js';
-import { createApplicationSchema, updateApplicationStatusSchema } from '../validators/application.validator.js';
+import ApplicationController from '../controllers/application.controller';
+import validate from '../../../core/middlewares/validation.middleware';
+import { authenticate, authorizeRoles } from '../../../core/middlewares/auth.middleware';
+import { createApplicationSchema, updateApplicationStatusSchema } from '../validators/application.validator';
 
 const router = Router();
 const controller = new ApplicationController();

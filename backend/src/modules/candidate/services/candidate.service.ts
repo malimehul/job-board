@@ -1,11 +1,11 @@
-import CandidateRepository from '../repositories/candidate.repository.js';
-import JobRepository from '../../jobs/repositories/job.repository.js';
-import UserRepository from '../../auth/repositories/user.repository.js';
-import { IJobDocument } from '../../jobs/models/job.model.js';
-import { IApplicationDocument } from '../../applications/models/application.model.js';
-import { IUserDocument } from '../../auth/models/user.model.js';
-import { NotFoundError } from '../../../core/errors/AppError.js';
-import { uploadBufferToCloudinary } from '../../../core/utils/cloudinary.js';
+import CandidateRepository from '../repositories/candidate.repository';
+import JobRepository from '../../jobs/repositories/job.repository';
+import UserRepository from '../../auth/repositories/user.repository';
+import { IJobDocument } from '../../jobs/models/job.model';
+import { IApplicationDocument } from '../../applications/models/application.model';
+import { IUserDocument } from '../../auth/models/user.model';
+import { NotFoundError } from '../../../core/errors/AppError';
+import { uploadBufferToCloudinary } from '../../../core/utils/cloudinary';
 
 export class CandidateService {
   private candidateRepository: CandidateRepository;

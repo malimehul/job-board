@@ -1,10 +1,10 @@
 import { Router } from 'express';
 import multer from 'multer';
-import CandidateController from '../controllers/candidate.controller.js';
-import validate from '../../../core/middlewares/validation.middleware.js';
-import { authenticate, authorizeRoles } from '../../../core/middlewares/auth.middleware.js';
-import { bookmarkQuerySchema, candidateApplicationsQuerySchema } from '../validators/candidate.validator.js';
-import { updateProfileSchema } from '../../auth/validators/auth.validator.js';
+import CandidateController from '../controllers/candidate.controller';
+import validate from '../../../core/middlewares/validation.middleware';
+import { authenticate, authorizeRoles } from '../../../core/middlewares/auth.middleware';
+import { bookmarkQuerySchema, candidateApplicationsQuerySchema } from '../validators/candidate.validator';
+import { updateProfileSchema } from '../../auth/validators/auth.validator';
 
 const router = Router();
 const controller = new CandidateController();

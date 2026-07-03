@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
-import CandidateService from '../services/candidate.service.js';
-import { BadRequestError } from '../../../core/errors/AppError.js';
+import CandidateService from '../services/candidate.service';
+import { BadRequestError } from '../../../core/errors/AppError';
 
 export class CandidateController {
   private candidateService: CandidateService;
@@ -82,16 +82,16 @@ export class CandidateController {
         return {
           jobDetails: job
             ? {
-                _id: job._id,
-                title: job.title,
-                description: job.description,
-                skills: job.skills,
-                salaryMin: job.salaryMin,
-                salaryMax: job.salaryMax,
-                jobType: job.jobType,
-                location: job.location,
-                applicationDeadline: job.applicationDeadline,
-              }
+              _id: job._id,
+              title: job.title,
+              description: job.description,
+              skills: job.skills,
+              salaryMin: job.salaryMin,
+              salaryMax: job.salaryMax,
+              jobType: job.jobType,
+              location: job.location,
+              applicationDeadline: job.applicationDeadline,
+            }
             : null,
           recruiterInfo: job ? job.recruiterId : null,
           status: app.status,

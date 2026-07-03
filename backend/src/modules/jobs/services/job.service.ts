@@ -1,8 +1,8 @@
-import JobRepository from '../repositories/job.repository.js';
-import { IJobDocument } from '../models/job.model.js';
-import { CreateJobDTO, UpdateJobDTO } from '../dtos/job.dto.js';
-import { JobSearchQueryDTO } from '../dtos/job.query.dto.js';
-import { NotFoundError, ForbiddenError, BadRequestError } from '../../../core/errors/AppError.js';
+import JobRepository from '../repositories/job.repository';
+import { IJobDocument } from '../models/job.model';
+import { CreateJobDTO, UpdateJobDTO } from '../dtos/job.dto';
+import { JobSearchQueryDTO } from '../dtos/job.query.dto';
+import { NotFoundError, ForbiddenError, BadRequestError } from '../../../core/errors/AppError';
 
 export class JobService {
   private jobRepository: JobRepository;

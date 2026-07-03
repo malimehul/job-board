@@ -1,7 +1,7 @@
-import Job, { IJobDocument } from '../models/job.model.js';
-import Application from '../../applications/models/application.model.js';
-import { CreateJobDTO, UpdateJobDTO } from '../dtos/job.dto.js';
-import { JobSearchQueryDTO } from '../dtos/job.query.dto.js';
+import Job, { IJobDocument } from '../models/job.model';
+import Application from '../../applications/models/application.model';
+import { CreateJobDTO, UpdateJobDTO } from '../dtos/job.dto';
+import { JobSearchQueryDTO } from '../dtos/job.query.dto';
 
 export class JobRepository {
   async create(recruiterId: string, jobData: CreateJobDTO): Promise<IJobDocument> {
