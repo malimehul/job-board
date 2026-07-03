@@ -19,6 +19,9 @@ const envSchema = z.object({
   SMTP_USER: z.string().optional(),
   SMTP_PASS: z.string().optional(),
   FRONTEND_URL: z.string().default('http://localhost:3000'),
+  ADMIN_NAME: z.string().trim().min(1).optional(),
+  ADMIN_EMAIL: z.email({ error: 'Invalid admin email address' }).optional(),
+  ADMIN_PASSWORD: z.string().min(8).max(128).optional(),
 });
 
 const envParsed = envSchema.safeParse(process.env);

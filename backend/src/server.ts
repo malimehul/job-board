@@ -2,10 +2,12 @@ import app from './app';
 import env from './core/config/environment';
 import connectDB from './core/config/db';
 import logger from './core/utils/logger';
+import initializeAdminUser from './modules/admin/services/admin-initializer.service';
 
 const startServer = async () => {
   // Connect Database
   await connectDB();
+  await initializeAdminUser();
 
   const port = env.PORT || 3000;
 
@@ -30,4 +32,7 @@ const startServer = async () => {
   });
 };
 
-startServer();
+startServer().catch((error: unknown) => {
+  logger.error(`Failed to start server: ${error instanceof Error ? error.message : error}`);
+  process.exit(1);
+});

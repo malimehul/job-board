@@ -58,6 +58,12 @@ JWT_EXPIRES_IN=15m
 JWT_REFRESH_SECRET=<your_refresh_secret>
 JWT_REFRESH_EXPIRES_IN=7d
 
+# Initial administrator credentials
+# Required when starting with an empty users collection.
+ADMIN_NAME=<admin_name>
+ADMIN_EMAIL=<admin_email>
+ADMIN_PASSWORD=<strong_admin_password>
+
 # Cloudinary credentials
 # Used to upload, store, and download candidate resume PDF files.
 CLOUDINARY_CLOUD_NAME=<your_cloud_name>
@@ -68,8 +74,8 @@ CLOUDINARY_API_SECRET=<your_api_secret>
 # Used for sending emails (OTP, password reset, notifications, etc.)
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
-SMTP_USER=<your_email>
-SMTP_PASS=<your_app_password>
+SMTP_USER=<your_email>         # note: use your email address (e.g., [EMAIL_ADDRESS])
+SMTP_PASS=<your_app_password>  # note: use your app password
 ```
 
 ---
@@ -153,3 +159,6 @@ backend/
 - Use MongoDB Atlas or a local MongoDB instance.
 - Cloudinary is required for resume PDF storage.
 - Configure SMTP credentials to enable email functionality.
+- On startup, an empty users collection is initialized with one Admin account
+  using `ADMIN_NAME`, `ADMIN_EMAIL`, and `ADMIN_PASSWORD`. Existing users are
+  never modified, and subsequent startups do not create another admin.
