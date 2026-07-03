@@ -52,6 +52,9 @@ PORT=5000
 
 MONGO_URI=<your_mongo_uri>
 
+# Browser client allowed by CORS
+FRONTEND_URL=http://localhost:3000
+
 JWT_SECRET=<your_jwt_secret>
 JWT_EXPIRES_IN=15m
 

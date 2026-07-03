@@ -16,17 +16,23 @@ import { NotFoundError } from './core/errors/AppError';
 
 const app = express();
 
+const allowedOrigins = env.FRONTEND_URL
+  .split(',')
+  .map((url: string) => url.trim());
+
 // Security Middlewares
 app.use(helmet());
-app.use(cors({
-  origin: '*', // Customize this in production
-  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-}));
+app.use(
+  cors({
+    origin: allowedOrigins,
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+  })
+);
 
 // Rate Limiter
 const limiter = rateLimit({
-  windowMs: 1 * 60 * 1000, // 15 minutes
+  windowMs: 15 * 60 * 1000, // 15 minutes
   max: 100, // Limit each IP to 100 requests per window
   standardHeaders: true,
   legacyHeaders: false,
