@@ -200,3 +200,104 @@ http://localhost:5000
 * Do **not** commit `.env` files.
 * Use the provided `.env.example` files as references.
 * Ensure MongoDB is running before starting the backend.
+
+---
+---
+
+
+# Features Implemented By me
+
+## Authentication & Authorization
+- JWT-based Authentication
+- Role-Based Access Control (Admin, Recruiter, Candidate)
+- Secure Password Hashing (bcrypt)
+- Protected Routes & Middleware
+- Refresh Token Support (if implemented)
+
+## Recruiter Features
+- Register & Login
+- Create Job Listings
+- Edit Job Listings
+- Delete Job Listings
+- Close/Reopen Jobs
+- View Applicants for Each Job
+- Update Candidate Application Status
+- Recruiter Dashboard
+  - Active Jobs Count
+  - Total Applicants
+  - Recent Activity
+
+## Candidate Features
+- Register & Login
+- Complete Candidate Profile
+- Resume Upload
+- Skills Management
+- Years of Experience
+- Browse Open Jobs
+- Search Jobs
+- Filter Jobs
+- Apply with Cover Letter
+- Track Application Status
+- Save/Bookmark Jobs
+
+## Admin Features
+- Platform Dashboard
+- Platform Statistics
+- Filter Statistics by Date Range
+- Charts & Analytics
+- Manage Recruiters
+- Manage Candidates
+- Activate/Suspend Users
+- View All Jobs
+- View All Applications (Read Only)
+
+## API Features
+- RESTful API Design
+- Standardized API Responses
+- Global Error Handling
+- Request Validation
+- Pagination
+- Sorting
+- Filtering
+- Search Functionality
+
+## Database
+- MongoDB
+- Mongoose ODM
+- Proper Schema Relationships
+- Indexing
+- Aggregation Pipelines
+
+## Security
+- JWT Authentication
+- Password Hashing
+- CORS Configuration
+- Helmet Security Headers
+- Rate Limiting
+- Input Sanitization
+- Environment Variable Management
+
+## Frontend
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- Responsive UI
+- Loading States
+- Error States
+- Protected Pages
+- Role-Based Navigation
+
+## Bonus Features
+- ✅ Zod Validation
+- ✅ Email Notifications on Application Status Changes
+- ✅ API Documentation (Postman Collection: https://drive.google.com/file/d/1_m1ZiNmE7uwDmg1KRxhdTo2gruMoruqE/view?usp=drive_link)
+
+## Developer Experience
+- TypeScript
+- ESLint
+- Modular Folder Structure
+- Reusable Components
+- Custom Hooks
+- Service Layer Architecture
+- DTOs & Interfaces
+- Environment Configuration
