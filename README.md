@@ -282,10 +282,13 @@ http://localhost:5000
 - TypeScript
 - Tailwind CSS
 - Responsive UI
-- Loading States
 - Error States
 - Protected Pages
-- Role-Based Navigation
+- Role-Based Navigation (RBAC)
+
+## ✅ Additinal Implemented Features
+- Forgot password with reset link send to user email address
+- Reset password with reset token
 
 ## ✅ Bonus Features
 - ✅ Zod Validation
