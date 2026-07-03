@@ -221,7 +221,7 @@ http://localhost:5000
 - Delete Job Listings
 - Close/Reopen Jobs
 - View Applicants for Each Job
-- Update Candidate Application Status
+- Update Candidate Application Status (✅ Email Notifications to Candidate on Application Status Changes)
 - Recruiter Dashboard
   - Active Jobs Count
   - Total Applicants
@@ -287,9 +287,9 @@ http://localhost:5000
 - Protected Pages
 - Role-Based Navigation
 
-## Bonus Features
+## ✅ Bonus Features
 - ✅ Zod Validation
-- ✅ Email Notifications on Application Status Changes
+- ✅ Email Notifications to Candidate on Application Status Changes
 - ✅ API Documentation (Postman Collection: https://drive.google.com/file/d/1_m1ZiNmE7uwDmg1KRxhdTo2gruMoruqE/view?usp=drive_link)
 
 ## Developer Experience
