@@ -96,6 +96,11 @@ SMTP_HOST=<smtp_host>        # e.g. smtp.gmail.com
 SMTP_PORT=<smtp_port>        # 587 (TLS) or 465 (SSL)
 SMTP_USER=<smtp_user>        # Email address
 SMTP_PASS=<smtp_password>    # App password or SMTP password
+
+# Init user that create my app at first time when DB empty(Dummy user)
+ADMIN_NAME=Mehul Mali
+ADMIN_EMAIL=malimehul.dev@gmail.com
+ADMIN_PASSWORD=Admin@123456
 ```
 
 ---
