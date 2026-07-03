@@ -15,6 +15,16 @@ job-portal/
 
 ---
 
+## Architecture Documentation
+
+Detailed architecture decisions, design trade-offs, security considerations, and scalability notes are available in:
+
+- [Overall Architecture Decisions](./ARCHITECTURE_DECISIONS.md)
+- [Backend Architecture Decisions](./backend/ARCHITECTURE_DECISIONS.md)
+- [Frontend Architecture Decisions](./frontend/ARCHITECTURE_DECISIONS.md)
+
+---
+
 # Prerequisites
 
 Before running the project, make sure you have:
